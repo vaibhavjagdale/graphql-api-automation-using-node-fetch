@@ -1,6 +1,6 @@
 {
-  "name": "@graphql/api-automation-using-node-fetch",
-  "version": "1.0.1",
+  "name": "graphql-api-automation-using-node-fetch-and-mocha",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "lint-fix": "eslint --fix -c .eslintrc.js --ext .ts,.js api",
     "test": "mocha api/test/services.spec.ts"
   },
-  "keywords": [],
   "author": "Vaibhav Jagdale",
   "license": "ISC",
   "dependencies": {
@@ -42,5 +41,13 @@
     "require": [
       "ts-node/register"
     ]
-  }
+  },
+  "keywords": [
+    "automated-testing",
+    "framework",
+    "GraphQL API testing",
+    "GraphQL API",
+    "mocha",
+    "chai"
+  ]
 }
