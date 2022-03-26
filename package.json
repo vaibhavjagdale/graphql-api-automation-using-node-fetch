@@ -1,0 +1,46 @@
+{
+  "name": "@graphql/api-automation-using-node-fetch",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist/ && rimraf reports/ && rimraf hiptest/*.xml && rimraf *.tmp && rimraf allure-report",
+    "clean-build": "npm run clean && npm run build && npm run lint",
+    "lint": "eslint -c .eslintrc.js --ext .ts,.js api",
+    "lint-fix": "eslint --fix -c .eslintrc.js --ext .ts,.js api",
+    "test": "mocha api/test/services.spec.ts"
+  },
+  "keywords": [],
+  "author": "Vaibhav Jagdale",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^10.0.0",
+    "log4js": "^6.4.4",
+    "mocha": "^9.2.2",
+    "node-fetch": "2.6.6",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/jsonpath": "^0.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.2.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-react": "^7.26.1",
+    "jsonpath": "^1.1.1",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
+  },
+  "mocha": {
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}
